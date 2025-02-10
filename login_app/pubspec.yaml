@@ -15,6 +15,7 @@ dependencies:
   # 추가한 패키지
   dio: ^5.8.0+1
   flutter_secure_storage: ^9.2.4
+  shared_preferences: ^2.5.1
   provider: ^6.1.2
 
 dev_dependencies:

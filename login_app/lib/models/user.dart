@@ -1,3 +1,4 @@
+
 import 'package:login_app/models/auth.dart';
 
 class User {
@@ -23,27 +24,28 @@ class User {
     this.createdAt,
     this.updatedAt,
     this.enabled,
-    this.authList = const [],
+    this.authList = const []
   });
 
+  // User 👩‍💼 ➡ Map 🎁
   Map<String, dynamic> toMap() {
     return {
-      'no': no,
-      'id': id,
-      'username': username,
-      'password': password,
-      'name': name,
-      'email': email,
-      'createdAt': createdAt?.toIso8601String(),
-      'updatedAt': updatedAt?.toIso8601String(),
-      'enabled': enabled,
+      'no' : no,
+      'id' : id,
+      'useranme' : username,
+      'password' : password,
+      'name' : name,
+      'createdAt' : createdAt,
+      'updatedAt' : updatedAt,
+      'enabled' : enabled,
     };
   }
 
+  // Map 🎁 ➡  User 👩‍💼
   factory User.fromMap(Map<String, dynamic> map) {
     return User(
       no: map['no'],
-      id: map['id']?.toString(),
+      id: map['id'].toString(),
       username: map['username'],
       password: map['password'],
       name: map['name'],
@@ -57,5 +59,4 @@ class User {
     );
   }
 
-  
 }
